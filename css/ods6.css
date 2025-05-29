@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f9f5;
+}
+
+/* Navigation Styles - Updated to match ods-details-design */
+.main-nav {
+  background-color: #0077c2;
+  padding: 0.8rem 0;
+  margin-top: 1.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-nav li {
+  margin: 0 1rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-nav i {
+  font-size: 1.1rem;
+}
+
+/* Main Content Styles */
+.ods-main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #005a9c 0%, #0077c2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight {
+  color: #64b5f6;
+  font-weight: 600;
+}
+
+/* Card Styles */
+.content-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  background-color: #005a9c;
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content p {
+  color: #333;
+  text-align: center;
+}
+
+.card-content h3 {
+  text-align: center;
+  color: #005a9c;
+  margin-top: 0;
+}
+
+/* Call to Action */
+.call-to-action {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+}
+
+.call-to-action h3 {
+  color: #005a9c;
+  font-size: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0077c2;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #004c8c;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #64b5f6;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Accessibility Controls */
+.accessibility-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.accessibility-controls button, 
+.accessibility-controls select {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0077c2;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accessibility-controls button:hover {
+  background-color: #004c8c;
+}
+
+.accessibility-controls i {
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-nav li {
+    margin: 0 0.5rem;
+  }
+  
+  .main-nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.accessibility-group h4, h3 {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

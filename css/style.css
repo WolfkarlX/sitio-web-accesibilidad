@@ -1,0 +1,447 @@
+/* Importamos el css que contiene el estilo del buttom de accesibilidad en style.css para no tener que repetir code */
+@import "./accessibility-toggle.css";
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: white;
+  cursor: default;
+  font-size: 1rem; /* Base para rem */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+  background-color: #006400;
+  color: white;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  flex-shrink: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  text-decoration: underline;
+  outline: 2px solid #ffff00;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 0.5rem;
+}
+
+.hero-img {
+  border-radius: 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra inicial */
+  cursor: pointer; /* cambia el cursor para indicar que es interactiva */
+}
+
+.hero-img:hover {
+  transform: scale(1.1); /* agranda la imagen al 110% */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* sombra más grande y oscura */
+}
+
+
+/* Accesibilidad: controles fijos */
+.accessibility-controls {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-width: 320px;
+  font-size: 0.8rem;
+}
+.accessibility-controls button,
+.accessibility-controls select {
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+.accessibility-controls button:hover,
+.accessibility-controls select:hover,
+.accessibility-controls button:focus,
+.accessibility-controls select:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Formularios */
+form label {
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+form button[type="submit"] {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: #004d00;
+  outline: none;
+}
+
+/* Alto contraste */
+body.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+body.high-contrast header,
+body.high-contrast footer,
+body.high-contrast nav,
+body.high-contrast main,
+body.high-contrast div,
+body.high-contrast p,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast a,
+body.high-contrast li,
+body.high-contrast label,
+body.high-contrast i,
+body.high-contrast small {
+  background-color: black !important;
+  color: yellow !important;
+  border-color: yellow !important;
+}
+
+/* Para enlaces */
+body.high-contrast a {
+  color: yellow !important;
+  text-decoration: underline !important;
+}
+
+/* Modo oscuro */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Daltonismo (grayscale) */
+.color-blind-filter {
+  filter: grayscale(100%);
+}
+
+/* Ocultar imágenes y links */
+.hide-images img {
+  display: none !important;
+}
+.hide-links a {
+  color: rgb(255, 149, 0) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+/* Cursor personalizado */
+.cursor-large {
+  cursor: url('data:image/svg+xml;utf8,<svg height="48" width="48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="black" stroke-width="2" fill="yellow"/></svg>'), auto !important;
+}
+
+/* Responsive */
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  body {
+    padding: 0 0.8rem;
+  }
+
+  main {
+    padding: 0 0.3rem;
+  }
+
+  /* Accesibilidad: controles se ajustan para pantallas pequeñas */
+  .accessibility-controls {
+    max-width: 90vw;
+    right: 5vw;
+    bottom: 5vw;
+    font-size: 0.75rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  body {
+    padding: 0 0.5rem;
+  }
+
+  main {
+    padding: 0 0.5rem;
+  }
+
+  /* Accesibilidad: controles se apilan */
+  /* Accessibility Panel Styles */
+.accessibility-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Agrega también para evitar que filter afecte */
+  will-change: transform;
+}
+
+.accessibility-controls {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  max-width: 90vw;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.accessibility-controls.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.accessibility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accessibility-header h3 {
+  margin: 0;
+  color: #005a9c;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  color: #333;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.accessibility-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.accessibility-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accessibility-group h3 {
+  color: #004d00;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.accessibility-group button,
+.accessibility-group select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.accessibility-group button {
+  justify-content: space-between;
+}
+
+.accessibility-group button:hover {
+  background-color: #f0f0f0;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #005a9c;
+}
+
+.accessibility-group button i {
+  font-size: 0.9rem;
+  color: #0077c2;
+}
+
+.accessibility-group select {
+  width: 100%;
+  padding: 0.5rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+
+.reset-btn {
+  background-color: #fff !important;
+  color: #dc3545 !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+}
+
+.reset-btn:hover {
+  background-color: rgba(220, 53, 69, 0.05) !important;
+}
+
+.save-btn {
+  background-color: #005a9c !important;
+  color: white !important;
+  border-color: #005a9c !important;
+  justify-content: center !important;
+  font-weight: 500;
+}
+
+.save-btn:hover {
+  background-color: #164326 !important;
+}
+
+/* Active state for toggles */
+body.dark-mode .accessibility-group button[onclick="toggleDarkMode()"],
+body.high-contrast .accessibility-group button[onclick="toggleHighContrast()"],
+body.color-blind-filter .accessibility-group button[onclick="toggleColorBlindFilter()"],
+body.cursor-large .accessibility-group button[onclick="toggleCursor()"],
+body.hide-images .accessibility-group button[onclick="toggleImages()"],
+body.hide-links .accessibility-group button[onclick="toggleLinks()"] {
+  background-color: #e3f2fd;
+  border-color: #0077c2;
+  color: #005a9c;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .accessibility-panel {
+    bottom: 15px;
+    right: 15px;
+  }
+  .grid{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto;
+  }
+  
+  .accessibility-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .accessibility-controls {
+    bottom: 65px;
+    right: 0;
+    width: 280px;
+    padding: 0.75rem;
+  }
+  
+  .accessibility-group button,
+  .accessibility-group select {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+} 
+}
