@@ -1,0 +1,404 @@
+:root {
+  --primary-blue: #005a9c;
+  --water-blue: #0077c2;
+  --light-blue: #64b5f6;
+  --aqua-blue: #00b4d8;
+  --deep-blue: #023e8a;
+  --ocean-blue: #03045e;
+  --white: #ffffff;
+  --light-bg: #f0f7ff;
+  --wave-color: rgba(0, 123, 255, 0.2);
+}
+
+/* Header y navegación con efecto de olas */
+.main-header {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--primary-blue) 100%);
+  color: white;
+  padding: 1.5rem 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.wave-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-size: 1000px 100px;
+}
+
+.wave-effect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>');
+  background-repeat: repeat-x;
+  background-size: 1000px 100px;
+  animation: waveAnimation 15s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1000px); }
+}
+
+/* Navegación con efecto acuático */
+.main-nav {
+  background: linear-gradient(90deg, var(--aqua-blue) 0%, var(--water-blue) 100%);
+  padding: 0.8rem 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-nav li {
+  margin: 0 1rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.main-nav a:hover::before,
+.main-nav a.active::before {
+  transform: translateY(0);
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.main-nav i {
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Contenido principal */
+.ods-main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgba(0, 90, 156, 0.9) 0%, rgba(0, 119, 194, 0.9) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 90, 156, 0.2);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(100, 181, 246, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(100, 181, 246, 0.2) 0%, transparent 20%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #a8d8ff;
+  font-weight: 600;
+}
+
+.hero-image {
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Tarjetas con efecto de agua */
+.content-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 90, 156, 0.1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 90, 156, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--aqua-blue) 0%, var(--water-blue) 100%);
+}
+
+.card-icon {
+  background: linear-gradient(135deg, var(--aqua-blue) 0%, var(--water-blue) 100%);
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  color: var(--deep-blue);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card-content p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Call to Action */
+.call-to-action {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 119, 194, 0.1) 100%);
+  border-radius: 12px;
+  border: 2px dashed var(--light-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="30" r="3" fill="%2300b4d8" opacity="0.3"/><circle cx="50" cy="15" r="2" fill="%2300b4d8" opacity="0.3"/><circle cx="80" cy="40" r="4" fill="%2300b4d8" opacity="0.3"/><circle cx="40" cy="70" r="3" fill="%2300b4d8" opacity="0.3"/><circle cx="70" cy="85" r="2" fill="%2300b4d8" opacity="0.3"/></svg>');
+  background-size: 200px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.call-to-action h3 {
+  color: var(--deep-blue);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.call-to-action img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--aqua-blue) 0%, var(--water-blue) 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 119, 194, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 119, 194, 0.4);
+}
+
+/* Footer */
+.main-footer {
+  background: linear-gradient(90deg, var(--deep-blue) 0%, var(--ocean-blue) 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #a8d8ff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(100, 181, 246, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(100, 181, 246, 0.1) 0%, transparent 20%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-nav li {
+    margin: 0 0.5rem;
+  }
+  
+  .main-nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

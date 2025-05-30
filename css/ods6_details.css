@@ -353,7 +353,7 @@ body {
 .accessibility-controls {
   position: fixed;
   bottom: 0;
-  left: 0;
+  top: 0%;
   right: 0;
   background-color: #333;
   padding: 0.8rem;
@@ -366,7 +366,9 @@ body {
 
 .accessibility-controls button, 
 .accessibility-controls select {
-  padding: 0.5rem 0.8rem;
+  width: 160px; /* ancho fijo igual para todos */
+  height: 40px; /* alto fijo igual para todos */
+  padding: 0; /* quitar padding para no alterar tamaño */
   border: none;
   border-radius: 4px;
   background-color: #0077c2;
@@ -374,7 +376,11 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center; /* centrar contenido */
   gap: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  white-space: nowrap; /* evitar salto de línea */
 }
 
 .accessibility-controls button:hover {
@@ -412,8 +418,15 @@ body {
   .action-btn {
     justify-content: center;
   }
-  
+
+  /* Ajuste para botones accesibilidad en móvil */
+  .accessibility-controls button,
+  .accessibility-controls select {
+    width: 100%;
+    height: 40px;
+  }
 }
+
 .accessibility-group h4, h3 {
   color: #fff;
   font-size: 0.85rem;
