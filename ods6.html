@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Información ODS 6 - Agua limpia y saneamiento</title>
-  <link rel="icon" href="img/ods_6.png">
+  <link rel="icon" href="img/ods_6.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/ods6_details.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -30,25 +30,37 @@
 
     <main class="ods-main">
       <section class="hero-banner">
-        <img src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-06.png" alt="ODS 6" />
-        <div class="hero-content">
-          <h2>Transformando nuestro mundo:</h2>
-          <h2>Agua limpia y saneamiento</h2>
-          <p>El sexto Objetivo de Desarrollo Sostenible busca garantizar acceso al agua potable y saneamiento para todos los habitantes del planeta</p>
+        <div class="hero-wrapper">
+          <img
+            src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-06.png"
+            alt="ODS 6"
+            class="hero-img"
+          />
+          <div class="hero-content">
+            <h2>Transformando nuestro mundo:</h2>
+            <h2>Agua limpia y saneamiento</h2>
+            <p>
+              El sexto Objetivo de Desarrollo Sostenible busca garantizar acceso al agua potable y saneamiento para todos los habitantes del planeta
+            </p>
+          </div>
         </div>
       </section>
 
       <article class="ods-content">
-        <section class="objective-section">
+        <section class="objective-section card-section">
           <div class="section-header">
             <i class="fas fa-bullseye"></i>
             <h2>Objetivo Principal</h2>
           </div>
-          <p class="highlight-text">Garantizar la disponibilidad de agua y su gestión sostenible y el saneamiento para todos.</p>
-          <p>El agua libre de impurezas y accesible para todos es parte esencial del mundo en que queremos vivir. Hay suficiente agua dulce en el planeta para lograr este sueño.</p>
+          <p class="highlight-text">
+            Garantizar la disponibilidad de agua y su gestión sostenible y el saneamiento para todos.
+          </p>
+          <p>
+            El agua libre de impurezas y accesible para todos es parte esencial del mundo en que queremos vivir. Hay suficiente agua dulce en el planeta para lograr este sueño.
+          </p>
         </section>
 
-        <section class="targets-section">
+        <section class="targets-section card-section">
           <div class="section-header">
             <i class="fas fa-list-check"></i>
             <h2>Metas Clave</h2>
@@ -64,16 +76,20 @@
             </div>
             <div class="target-card">
               <div class="target-number">6.3</div>
-              <p>Para 2030, mejorar la calidad del agua reduciendo la contaminación, eliminando el vertimiento y minimizando la emisión de productos químicos y materiales peligrosos</p>
+              <p>
+                Para 2030, mejorar la calidad del agua reduciendo la contaminación, eliminando el vertimiento y minimizando la emisión de productos químicos y materiales peligrosos
+              </p>
             </div>
             <div class="target-card">
               <div class="target-number">6.4</div>
-              <p>Para 2030, aumentar considerablemente el uso eficiente de los recursos hídricos en todos los sectores y asegurar la sostenibilidad de la extracción y el abastecimiento de agua dulce</p>
+              <p>
+                Para 2030, aumentar considerablemente el uso eficiente de los recursos hídricos en todos los sectores y asegurar la sostenibilidad de la extracción y el abastecimiento de agua dulce
+              </p>
             </div>
           </div>
         </section>
 
-        <section class="challenges-section">
+        <section class="challenges-section card-section">
           <div class="section-header">
             <i class="fas fa-exclamation-triangle"></i>
             <h2>Desafíos Globales</h2>
@@ -94,7 +110,7 @@
           </div>
         </section>
 
-        <section class="solutions-section">
+        <section class="solutions-section card-section">
           <div class="section-header">
             <i class="fas fa-lightbulb"></i>
             <h2>Soluciones Propuestas</h2>
@@ -109,7 +125,7 @@
         </section>
       </article>
 
-      <section class="data-visualization">
+      <section class="data-visualization card-section">
         <h2>El agua en cifras</h2>
         <div class="stats-grid">
           <div class="stat-item">
@@ -127,7 +143,7 @@
         </div>
       </section>
 
-      <section class="call-to-action">
+      <section class="call-to-action card-section">
         <h3>¿Cómo puedes contribuir?</h3>
         <div class="action-buttons">
           <a href="recursos.html" class="action-btn"><i class="fas fa-book-open"></i> Aprende más</a>
@@ -145,8 +161,8 @@
         <div class="footer-section">
           <h4>Enlaces útiles</h4>
           <ul>
-            <li><a href="https://www.un.org/sustainabledevelopment/es/water-and-sanitation/" target="_blank">ONU - ODS 6</a></li>
-            <li><a href="https://www.sdg6data.org/es" target="_blank">SDG6 Data Portal</a></li>
+            <li><a href="https://www.un.org/sustainabledevelopment/es/water-and-sanitation/" target="_blank" rel="noopener noreferrer">ONU - ODS 6</a></li>
+            <li><a href="https://www.sdg6data.org/es" target="_blank" rel="noopener noreferrer">SDG6 Data Portal</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -166,10 +182,10 @@
   </div>
 
   <!-- Accesibilidad -->
-  <div id="accessibility-panel" class="accessibility-panel"> <!-- Agarramos el id en ods6.css (es hijo directo de body) -->
+  <div id="accessibility-panel" class="accessibility-panel">
     <button id="accessibility-toggle" class="accessibility-toggle" aria-label="Abrir panel de accesibilidad">
-      <i class="fas fa-universal-access"></i><br> <!-- Salto de linea -->
-      Accesibilidad <!-- Se imprime debajo del icon por el salto de linea -->
+      <i class="fas fa-universal-access"></i><br />
+      Accesibilidad
     </button>
 
     <div id="accessibility-controls" class="accessibility-controls" style="display: none;">
@@ -186,7 +202,7 @@
           <button onclick="changeFontSize('decrease')"><i class="fas fa-text-width"></i> Disminuir</button>
           <button onclick="resetFontSize()"><i class="fas fa-undo"></i> Restablecer</button>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Tipo de fuente</h4>
           <select onchange="changeFontFamily(this.value)">
@@ -195,21 +211,21 @@
             <option value="comic">Comic Sans MS</option>
           </select>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Visualización</h4>
           <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Modo Oscuro</button>
           <button onclick="toggleHighContrast()"><i class="fas fa-adjust"></i> Alto Contraste</button>
           <button onclick="toggleColorBlindFilter()"><i class="fas fa-eye"></i> Filtro Daltonismo</button>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Opciones avanzadas</h4>
           <button onclick="toggleCursor()"><i class="fas fa-mouse-pointer"></i> Cursor Grande</button>
           <button onclick="toggleImages()"><i class="fas fa-image"></i> Ocultar Imágenes</button>
           <button onclick="toggleLinks()"><i class="fas fa-link"></i> Resaltar Links</button>
         </div>
-        
+
         <div class="accessibility-group">
           <button onclick="resetAccessibility()" class="reset-btn"><i class="fas fa-sync-alt"></i> Restablecer todo</button>
           <button onclick="saveSettings()" class="save-btn"><i class="fas fa-save"></i> Guardar configuración</button>

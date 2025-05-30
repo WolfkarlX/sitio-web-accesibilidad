@@ -194,7 +194,7 @@ body.high-contrast a {
 
 /* Cursor personalizado */
 .cursor-large {
-  cursor: url('data:image/svg+xml;utf8,<svg height="48" width="48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="black" stroke-width="2" fill="yellow"/></svg>'), auto !important;
+  cursor: url('data:image/svg+xml;utf8,\ <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">\ <circle cx="24" cy="24" r="20" stroke="black" stroke-width="4" fill="yellow" />\ <polygon points="18,12 18,36 30,24" fill="black" />\ </svg>'), auto !important;
 }
 
 /* Responsive */

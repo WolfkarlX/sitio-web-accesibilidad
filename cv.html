@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Currículum Vitae</title>
-  <link rel="icon" href="img/ods_6.png"> <!-- Page icon -->
+  <link rel="icon" href="img/ods_6.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/cv.css" />
   <link rel="stylesheet" href="css/ods6_details.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-  <div id="page-content"> <!-- Envolvemos el contenido de la page (excepto el panel de accesibilidad) con id "page-content" -->
+  <div id="page-content">
     <header id="header-static" class="cv-header">
       <div class="header-content">
         <h1>Karla Karina Ramírez Márquez</h1>
@@ -30,42 +30,48 @@
 
     <main class="cv-main">
       <div class="cv-container">
+
+        <!-- Datos Personales -->
         <section class="cv-section personal-info">
           <div class="section-header">
             <i class="fas fa-user-circle"></i>
             <h2>Datos Personales</h2>
           </div>
-          <div>
-            <img src="" alt="">
-          </div>
-          <div class="info-grid">
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <p>karlarmlp@gmail.com</p>
+          <div class="personal-info-wrapper" style="display:flex; flex-wrap: wrap; align-items:center; gap:2rem;">
+            <div class="profile-photo" style="flex: 1 1 200px;">
+              <!-- Aquí puedes agregar la foto si la tienes -->
+              <img src="img/karla_oracle.jpeg" alt="Foto de Karla Karina Ramírez Márquez" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
             </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <p>+52 314 352 0638</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Colima, México</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-link"></i>
-              <p>linkedin.com/in/karlaram</p>
+            <div class="info-grid" style="flex: 2 1 350px;">
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>karlarmlp@gmail.com</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+52 314 352 0638</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Colima, México</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-link"></i>
+                <p><a href="https://linkedin.com/in/karlaram" target="_blank" rel="noopener noreferrer">linkedin.com/in/karlaram</a></p>
+              </div>
             </div>
           </div>
         </section>
 
+        <!-- Formación Académica -->
         <section class="cv-section education">
           <div class="section-header">
             <i class="fas fa-graduation-cap"></i>
             <h2>Formación Académica</h2>
           </div>
           <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-date">2022 - Presente</div>
+            <article class="timeline-item">
+              <time class="timeline-date" datetime="2022">2022 - Presente</time>
               <div class="timeline-content">
                 <h3>Ingeniería de Software</h3>
                 <p class="institution">Universidad de Colima</p>
@@ -74,25 +80,26 @@
                   <li>Promedio: 9.4/10</li>
                 </ul>
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2019 - 2022</div>
+            </article>
+            <article class="timeline-item">
+              <time class="timeline-date" datetime="2019">2019 - 2022</time>
               <div class="timeline-content">
                 <h3>Bachillerato General</h3>
                 <p class="institution">Universidad de Colima</p>
               </div>
-            </div>
+            </article>
           </div>
         </section>
 
+        <!-- Experiencia Profesional -->
         <section class="cv-section experience">
           <div class="section-header">
             <i class="fas fa-briefcase"></i>
             <h2>Experiencia Profesional</h2>
           </div>
           <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-date">2024</div>
+            <article class="timeline-item">
+              <time class="timeline-date" datetime="2024">2024</time>
               <div class="timeline-content">
                 <h3>Prácticas Profesionales</h3>
                 <p class="company">Oracle Corporation</p>
@@ -102,9 +109,9 @@
                   <li>Participación en equipo ágil</li>
                 </ul>
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2022 - 2024</div>
+            </article>
+            <article class="timeline-item">
+              <time class="timeline-date" datetime="2022">2022 - 2024</time>
               <div class="timeline-content">
                 <h3>Desarrollo de Proyecto Integrador</h3>
                 <p class="company">Proyecto Universitario</p>
@@ -114,10 +121,11 @@
                   <li>Integración de interfaz accesible</li>
                 </ul>
               </div>
-            </div>
+            </article>
           </div>
         </section>
 
+        <!-- Habilidades Técnicas -->
         <section class="cv-section skills">
           <div class="section-header">
             <i class="fas fa-code"></i>
@@ -151,6 +159,7 @@
             </div>
           </div>
         </section>
+
       </div>
     </main>
 
@@ -166,11 +175,11 @@
     </footer>
   </div>
 
-  <!-- Accesibilidad -->
-  <div id="accessibility-panel" class="accessibility-panel"> <!-- Agarramos el id en ods1.css (es hijo directo de body) -->
+  <!-- Panel de Accesibilidad -->
+  <div id="accessibility-panel" class="accessibility-panel">
     <button id="accessibility-toggle" class="accessibility-toggle" aria-label="Abrir panel de accesibilidad">
-      <i class="fas fa-universal-access"></i><br> <!-- Salto de linea -->
-      Accesibilidad <!-- Se imprime debajo del icon por el salto de linea -->
+      <i class="fas fa-universal-access"></i><br />
+      Accesibilidad
     </button>
 
     <div id="accessibility-controls" class="accessibility-controls" style="display: none;">
@@ -187,7 +196,7 @@
           <button onclick="changeFontSize('decrease')"><i class="fas fa-text-width"></i> Disminuir</button>
           <button onclick="resetFontSize()"><i class="fas fa-undo"></i> Restablecer</button>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Tipo de fuente</h4>
           <select onchange="changeFontFamily(this.value)">
@@ -196,21 +205,21 @@
             <option value="comic">Comic Sans MS</option>
           </select>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Visualización</h4>
           <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Modo Oscuro</button>
           <button onclick="toggleHighContrast()"><i class="fas fa-adjust"></i> Alto Contraste</button>
           <button onclick="toggleColorBlindFilter()"><i class="fas fa-eye"></i> Filtro Daltonismo</button>
         </div>
-        
+
         <div class="accessibility-group">
           <h4>Opciones avanzadas</h4>
           <button onclick="toggleCursor()"><i class="fas fa-mouse-pointer"></i> Cursor Grande</button>
           <button onclick="toggleImages()"><i class="fas fa-image"></i> Ocultar Imágenes</button>
           <button onclick="toggleLinks()"><i class="fas fa-link"></i> Resaltar Links</button>
         </div>
-        
+
         <div class="accessibility-group">
           <button onclick="resetAccessibility()" class="reset-btn"><i class="fas fa-sync-alt"></i> Restablecer todo</button>
           <button onclick="saveSettings()" class="save-btn"><i class="fas fa-save"></i> Guardar configuración</button>

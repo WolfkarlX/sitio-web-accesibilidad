@@ -356,17 +356,23 @@ body {
   top: 0%;
   right: 0;
   background-color: #333;
-  padding: 0.8rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   z-index: 1000;
+  max-height: 100vh;   /* Limita la altura visible al 80% del viewport */
+  overflow-y: auto;   /* Agrega scroll vertical cuando el contenido sea más alto */
+ 
+  
+  
+  border-radius: 10px; /* Opcional para estética */
 }
 
 .accessibility-controls button, 
 .accessibility-controls select {
-  width: 160px; /* ancho fijo igual para todos */
+  width: 100%; /* ancho fijo igual para todos */
   height: 40px; /* alto fijo igual para todos */
   padding: 0; /* quitar padding para no alterar tamaño */
   border: none;
